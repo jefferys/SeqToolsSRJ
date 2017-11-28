@@ -1,0 +1,41 @@
+---
+title: "Overview"
+author: "Stuart R. Jefferys"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+For a quick overview, see the README.
+
+## Why are we doing this? Why does SeqTOOLSSRJ exist?
+
+I do genomic analysis on a regular basis, and am constantly re-inventing the wheel. I need a place to collect useful functions. Repeated need for and use of functions in various contexts allows for improvement and generalization. Such usage-oriented development - rather than a big design up front development - should allow me to be more productive.
+
+This is an incubator for things that may get moved to their own packages, so there will be a significant amount of churn. Managing change will be done carefully. Documentation is a major focus, because I forget and have to relearn how to do things over and over, and the intent of a function is generally more general that its implementation will be.
+
+## Who is the audience?
+ 
+	 People doing bioinformatics, computational biology, or statistical analysis in a genomics setting. Mainly me, or people I have direct interactions with, as polish, safety, and completeness are not requirements. Anyone else is welcome to use this, and contribute back, but everything must be MIT licensed for sharing. The specific domain this is being developed in is a group doing cancer genomics, mainly in humans but also in mouse, but it is not limited in application to this.	
+ * What does success look like?	
+	 It is easier to perform common or repeated genomic tasks or analysis using tools in this package than doing them by hand, even when the tools are not familiar or have been forgotten.	
+	 It is easy to find an applicable tool in this package, and easy to discover that such a tool exists, and best practices in genomics are represented by simple to use tools.	
+	 Simple examples are provided for each task that prompted the creation or inclusion of a function. Some examples may require tools or data to be provided externally.	
+
+# What is not covered?
+
+This does not include many of the major tools used to do stuff, only providing shallow wrappers to allow using them in a consistent way. Tools like samtools or bwa must be installed separately. 	
+
+This does not include any genomic data, except for sample "toy" data sets that are used for testing and examples. Some functions to automate retrieval of data are provided.
+
+This assumes Linux. You can always use docker. Many functions have tests, but nothing is tested anywhere other than the specific environments and versions of Linux that I use. You can clone the git repository and build locally. If you don't have required external tools installed, associated tests
+will be skipped.
+
+This could be in Perl or python, but R has a lot of traction in genomics. This is not in the Bioconductor workspace in the current iteration, but might integrate with parts of that in the future.
+
+
+	
+
